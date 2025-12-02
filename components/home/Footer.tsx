@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   return (
+    <Reveal>
     <footer className="bg-white/10 backdrop-blur-md text-black py-12 relative">
       <div className="container mx-auto px-6 grid md:grid-cols-4 gap-10">
 
@@ -64,5 +66,6 @@ export default function Footer() {
         © 2025 Jhatka Jar — All Rights Reserved.
       </div>
     </footer>
+    </Reveal>
   );
 }

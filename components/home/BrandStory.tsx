@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Reveal from "@/components/Reveal";
 import { CheckIcon } from "@heroicons/react/24/solid"; // optional icons
 
 export default function BrandStory() {
   return (
+    <Reveal effect="slide-left">
     <section className="py-32 bg-gradient-to-b from-[#fbf6ef] to-white relative overflow-hidden">
       {/* Optional decorative shapes */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-100 rounded-full -translate-x-1/3 -translate-y-1/3 blur-3xl"></div>
@@ -47,5 +49,6 @@ export default function BrandStory() {
         </div>
       </div>
     </section>
+    </Reveal>
   );
 }

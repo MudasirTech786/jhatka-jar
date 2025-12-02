@@ -1,5 +1,7 @@
+import Reveal from "@/components/Reveal";
 export default function FreeSample() {
     return (
+        <Reveal effect="slide-up">
         <section
             className="relative w-full py-8 text-white bg-cover bg-center"
             style={{
@@ -43,5 +45,6 @@ export default function FreeSample() {
 
             </div>
         </section>
+        </Reveal>
     );
 }

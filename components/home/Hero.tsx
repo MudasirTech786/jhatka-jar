@@ -55,12 +55,12 @@ export default function Hero() {
 
         {/* RIGHT BUTTONS (DESKTOP) — NOW lg ONLY */}
         <div className="hidden lg:flex items-center gap-5">
-          <Link href="/login" className="text-white text-lg font-semibold">
+          <Link href="/" className="text-white text-lg font-semibold">
             Log In
           </Link>
 
           <Link
-            href="/signup"
+            href="/"
             className="bg-[#F9D99A] text-black px-5 py-2 rounded-full font-semibold shadow-md"
           >
             Sign Up
@@ -87,20 +87,20 @@ export default function Hero() {
               Home
             </Link>
 
-            <Link href="/shop" onClick={() => setOpen(false)} className="text-white text-xl font-semibold">
+            <Link href="/" onClick={() => setOpen(false)} className="text-white text-xl font-semibold">
               Shop
             </Link>
 
-            <Link href="/products" onClick={() => setOpen(false)} className="text-white text-xl font-semibold">
+            <Link href="/" onClick={() => setOpen(false)} className="text-white text-xl font-semibold">
               Products
             </Link>
 
-            <Link href="/contact" onClick={() => setOpen(false)} className="text-white text-xl font-semibold">
+            <Link href="/" onClick={() => setOpen(false)} className="text-white text-xl font-semibold">
               Contact
             </Link>
 
             <Link
-              href="/login"
+              href="/"
               onClick={() => setOpen(false)}
               className="bg-white/20 px-4 py-3 rounded-md text-white text-center text-lg border border-white/20"
             >
@@ -108,7 +108,7 @@ export default function Hero() {
             </Link>
 
             <Link
-              href="/signup"
+              href="/"
               onClick={() => setOpen(false)}
               className="bg-[#F9D99A] text-black px-4 py-3 rounded-md text-center text-lg font-semibold"
             >
@@ -133,19 +133,20 @@ export default function Hero() {
 
           <div className="flex gap-4">
             <Link
-              href="/shop"
-              className="bg-black text-white font-semibold px-6 py-3 rounded-md shadow-lg"
+              href="https://wa.me/923029476438?text=I%20want%20a%20free%20Jhatka%20Jar%20sample"
+              className="bg-red-600 text-white px-8 py-3 rounded-xl font-bold shadow-md hover:bg-red-700 hover:scale-105 transition duration-200"
             >
               SHOP NOW
             </Link>
 
             <Link
-              href="/flavours"
-              className="border border-white text-white font-semibold px-6 py-3 rounded-md shadow-lg"
+              href="https://wa.me/923029476438?text=I%20want%20a%20free%20Jhatka%20Jar%20sample"
+              className="border-2 border-yellow-400 text-yellow-200 px-8 py-3 rounded-xl font-semibold shadow-md hover:bg-yellow-400 hover:text-black transition duration-200"
             >
               VIEW FLAVOURS
             </Link>
           </div>
+
         </div>
 
         {/* RIGHT SIDE EMPTY */}
