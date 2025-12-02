@@ -2,87 +2,73 @@ import Image from "next/image";
 import Reveal from "@/components/Reveal";
 
 const products = [
-  {
-    title: "Spicy Chilli Achar",
-    price: "PKR. 1000",
-    img: "/images/chilli Achaar mockup copy.png",
-    badge: "Best Seller",
-  },
-  {
-    title: "Onion Achaar",
-    price: "PKR. 1000",
-    img: "/images/Onion Achaar mockup.png",
-  },
-  {
-    title: "Garlic Achaar",
-    price: "PKR. 1000",
-    img: "/images/Garlic Achaar mockup copy.png",
-    badge: "Limited",
-  },
-  {
-    title: "Mix Achaar",
-    price: "PKR. 1000",
-    img: "/images/Mix Achaar mockup.png",
-    badge: "Limited",
-  },
+  { title: "Spicy Chilli Achar", price: "PKR. 1000", spice: "🌶️🌶️🌶️", img: "/images/chilli.png", badge: "Best Seller" },
+  { title: "Onion Achaar", price: "PKR. 1000", spice: "🌶️🌶️", img: "/images/Onion.png" },
+  { title: "Garlic Achaar", price: "PKR. 1000", spice: "🌶️", img: "/images/garlic.png", badge: "Limited" },
+  { title: "Mix Achaar", price: "PKR. 1000", spice: "🌶️🌶️", img: "/images/pickle.png", badge: "Limited" },
 ];
 
 export default function Showcase() {
   return (
     <Reveal effect="zoom">
-      <section className="py-32 relative overflow-hidden">
-
-        {/* Background Image */}
-        <div className="absolute inset-0 opacity-30">
-          <Image
-            src="/images/bg-mandala.png"
-            alt="Background"
-            fill
-            className="object-cover"
-          />
-        </div>
-
+      <section className="py-32 relative">
         <div className="container mx-auto px-6 relative z-10">
-          <h2 className="text-center text-5xl md:text-6xl font-extrabold mb-20 text-red-900">
+          <h2 className="text-center text-4xl md:text-5xl font-extrabold mb-16 text-gray-900">
             Signature Pickles Showcase
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-            {products.map((item) => (
-              <div
-                key={item.title}
-                className="bg-black/25 backdrop-blur-md rounded-3xl p-6 flex flex-col items-center text-center
-                           transition-transform transform hover:-translate-y-4 hover:scale-105 
-                           hover:shadow-2xl duration-500 relative border border-white/20"
-              >
-                <div className="w-full h-64 relative mb-6 drop-shadow-[0_0_25px_rgba(255,70,70,0.6)]">
-                  <Image
-                    src={item.img}
-                    alt={item.title}
-                    fill
-                    className="object-contain hover:scale-105 transition-transform duration-500"
-                  />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14 place-items-center">
+  {products.map((item, index) => (
+    <div
+      key={item.title}
+      className={`
+        bg-white rounded-2xl p-10 w-[300px]
+        shadow-lg hover:shadow-2xl transition-all duration-300
+        flex flex-col items-center text-center
+        ${
+          index === 0
+            ? "-rotate-6"
+            : index === 1
+            ? "rotate-4"
+            : index === 2
+            ? "-rotate-5"
+            : "rotate-6"
+        }
+      `}
+    >
+      {/* Product Image */}
+      <div className="w-48 h-64 relative mb-8">
+        <Image
+          src={item.img}
+          alt={item.title}
+          fill
+          className="object-contain"
+        />
+      </div>
 
-                  {item.badge && (
-                    <div className="absolute top-4 left-0 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-4 py-1 rounded-r-full font-semibold shadow-lg transform -rotate-12 text-sm">
-                      {item.badge}
-                    </div>
-                  )}
-                </div>
+      {/* Title */}
+      <h3 className="text-2xl font-extrabold text-gray-900 mb-2">
+        {item.title}
+      </h3>
 
-                <h3 className="font-bold text-2xl text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-xl text-gray-700 mb-6">{item.price}</p>
+      {/* Icons */}
+      <div className="text-3xl mb-4">{item.spice}</div>
 
-                <button className="mt-auto bg-gradient-to-r from-yellow-500 to-yellow-600 
-                  hover:from-yellow-600 hover:to-yellow-500 
-                  text-white font-semibold px-8 py-3 
-                  rounded-xl shadow-lg hover:shadow-2xl 
-                  transition-all duration-300">
-                  BUY NOW
-                </button>
-              </div>
-            ))}
-          </div>
+      {/* Price */}
+      <p className="text-2xl font-bold text-gray-900 mb-4">
+        {item.price}
+      </p>
+
+      {/* Button */}
+      <button className="bg-[#8B4B2E] hover:bg-[#723b22] text-white font-semibold px-8 py-3 rounded-full shadow-md w-full">
+        ADD TO CART
+      </button>
+    </div>
+  ))}
+</div>
+
+
+
         </div>
       </section>
     </Reveal>

@@ -16,7 +16,7 @@ export default function RecipeInspiration() {
         {/* Background Image */}
         <div className="absolute inset-0 opacity-30">
           <Image
-            src="/images/bg-mandala.png" // same background as your other sections
+            src="/images/bg-mandala.png"
             alt="Background texture"
             fill
             className="object-cover"
@@ -33,31 +33,34 @@ export default function RecipeInspiration() {
               <div
                 key={r.name}
                 className="
+                  relative
                   rounded-3xl
-                  p-4
-                  flex flex-col items-center text-center
-                  transition-transform duration-500
-                  hover:scale-105
-
-                  bg-black/25 
-                  backdrop-blur-md
+                  overflow-hidden
                   shadow-lg
                   border border-white/20
+                  transition-transform
+                  duration-500
+                  hover:scale-105
+                  aspect-[3/4]
                 "
               >
-                {/* Image */}
-                <div className="relative w-full h-48 mb-4 rounded-2xl overflow-hidden">
-                  <Image
-                    src={r.img}
-                    alt={r.name}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
+                {/* Background Image */}
+                <Image
+                  src={r.img}
+                  alt={r.name}
+                  fill
+                  className="object-cover"
+                />
 
-                <p className="mt-3 font-semibold text-lg text-gray-100">
-                  {r.name}
-                </p>
+                {/* Dark overlay */}
+                <div className="absolute inset-0 bg-black/40"></div>
+
+                {/* Text */}
+                <div className="absolute bottom-4 w-full text-center">
+                  <p className="text-white text-xl font-semibold drop-shadow-lg">
+                    {r.name}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

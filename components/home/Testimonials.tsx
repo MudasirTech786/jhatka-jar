@@ -37,9 +37,7 @@ export default function Testimonials() {
             flex flex-col items-center text-center
             transition-transform duration-500
             hover:-translate-y-4 hover:rotate-1
-            
-            bg-black/25 
-            backdrop-blur-md
+            bg-white
             border border-white/20
             shadow-md
           "
@@ -65,11 +63,11 @@ export default function Testimonials() {
 
                 <div className="text-red-400 text-3xl mb-4">“</div>
 
-                <p className="text-gray-100 text-base md:text-lg italic mb-6">
+                <p className="text-gray-900 text-base md:text-lg italic mb-6">
                   {r.text}
                 </p>
 
-                <h3 className="font-semibold text-lg text-white">{r.name}</h3>
+                <h3 className="font-semibold text-lg text-gray-900">{r.name}</h3>
               </div>
             ))}
           </div>
