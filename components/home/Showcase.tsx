@@ -3,7 +3,7 @@ import Reveal from "@/components/Reveal";
 
 const products = [
   { title: "Spicy Chilli Achar", price: "PKR. 1000", spice: "🌶️🌶️🌶️", img: "/images/chilli.png", badge: "Best Seller" },
-  { title: "Onion Achaar", price: "PKR. 1000", spice: "🌶️🌶️", img: "/images/Onion.png" },
+  { title: "Onion Achaar", price: "PKR. 1000", spice: "🌶️🌶️", img: "/images/onion-brand.png" },
   { title: "Garlic Achaar", price: "PKR. 1000", spice: "🌶️", img: "/images/garlic.png", badge: "Limited" },
   { title: "Mix Achaar", price: "PKR. 1000", spice: "🌶️🌶️", img: "/images/pickle.png", badge: "Limited" },
 ];
