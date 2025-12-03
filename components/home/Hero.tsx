@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section
       className="relative w-full min-h-[95vh] bg-cover bg-center bg-no-repeat text-white flex items-center"
-      style={{ backgroundImage: "url('/images/Hero.jpg')" }}
+      style={{ backgroundImage: "url('/images/banner.jpg')" }}
     >
       {/* DARK OVERLAY */}
       <div className="absolute inset-0 z-0" />
