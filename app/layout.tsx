@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Jhatka Jar",
-  description: "Best Achar Taske",
+  description: "Pickles From Pakistan",
 };
 
 export default function RootLayout({

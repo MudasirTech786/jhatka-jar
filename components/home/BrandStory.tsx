@@ -4,7 +4,7 @@ import { CheckIcon } from "@heroicons/react/24/solid";
 
 export default function BrandStory() {
   return (
-    <Reveal effect="slide-left">
+    <Reveal effect="slide-up">
       <section className="py-32 relative overflow-hidden">
 
         {/* Background Image */}

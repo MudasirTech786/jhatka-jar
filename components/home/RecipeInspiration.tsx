@@ -10,11 +10,11 @@ const recipes = [
 
 export default function RecipeInspiration() {
   return (
-    <Reveal effect="slide-right">
-      <section className="py-32 relative overflow-hidden">
+    <Reveal effect="slide-up">
+      <section className="py-20 md:py-32 relative overflow-hidden">
 
         {/* Background Image */}
-        <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 opacity-20">
           <Image
             src="/images/bg-mandala.png"
             alt="Background texture"
@@ -23,12 +23,20 @@ export default function RecipeInspiration() {
           />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-16 text-center text-red-900">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 sm:mb-16 text-center text-red-900">
             Recipe Inspiration
           </h2>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          {/* Responsive Grid */}
+          <div className="
+            grid
+            grid-cols-1 
+            sm:grid-cols-2 
+            md:grid-cols-4 
+            gap-6 sm:gap-8
+          ">
             {recipes.map((r) => (
               <div
                 key={r.name}
@@ -44,7 +52,7 @@ export default function RecipeInspiration() {
                   aspect-[3/4]
                 "
               >
-                {/* Background Image */}
+                {/* Image */}
                 <Image
                   src={r.img}
                   alt={r.name}
@@ -52,18 +60,19 @@ export default function RecipeInspiration() {
                   className="object-cover"
                 />
 
-                {/* Dark overlay */}
+                {/* Overlay */}
                 <div className="absolute inset-0 bg-black/40"></div>
 
-                {/* Text */}
-                <div className="absolute bottom-4 w-full text-center">
-                  <p className="text-white text-xl font-semibold drop-shadow-lg">
+                {/* Label */}
+                <div className="absolute bottom-4 w-full text-center px-2">
+                  <p className="text-white text-lg sm:text-xl font-semibold drop-shadow-lg">
                     {r.name}
                   </p>
                 </div>
               </div>
             ))}
           </div>
+
         </div>
       </section>
     </Reveal>

@@ -1,76 +1,100 @@
 import Image from "next/image";
-import Reveal from "@/components/Reveal";
 
 const products = [
-  { title: "Spicy Chilli Achar", price: "PKR. 1000", spice: "🌶️🌶️🌶️", img: "/images/chilli.png", badge: "Best Seller" },
-  { title: "Onion Achaar", price: "PKR. 1000", spice: "🌶️🌶️", img: "/images/onion-brand.png" },
-  { title: "Garlic Achaar", price: "PKR. 1000", spice: "🌶️", img: "/images/garlic.png", badge: "Limited" },
-  { title: "Mix Achaar", price: "PKR. 1000", spice: "🌶️🌶️", img: "/images/pickle.png", badge: "Limited" },
+  {
+    title: "Spicy Chilli Achar",
+    price: "PKR. 1000",
+    oldPrice: 2500,
+    spice: "🌶️🌶️🌶️",
+    img: "/images/Chilli card.jpg",
+    badge: "Best Seller"
+  },
+  {
+    title: "Onion Achaar",
+    price: "PKR. 1000",
+    oldPrice: 2500,
+    spice: "🌶️🌶️",
+    img: "/images/Onion card.jpg",
+  },
+  {
+    title: "Garlic Achaar",
+    price: "PKR. 1000",
+    oldPrice: 2500,
+    spice: "🌶️",
+    img: "/images/Garlic card.jpg",
+    badge: "Limited"
+  },
+  {
+    title: "Mix Achaar",
+    price: "PKR. 1000",
+    oldPrice: 2500,
+    spice: "🌶️🌶️",
+    img: "/images/Mix card.jpg",
+    badge: "Limited"
+  },
 ];
 
 export default function Showcase() {
   return (
-    <Reveal effect="zoom">
-      <section className="py-32 relative">
-        <div className="container mx-auto px-6 relative z-10">
-          <h2 className="text-center text-4xl md:text-5xl font-extrabold mb-16 text-gray-900">
-            Signature Pickles Showcase
-          </h2>
+    <section className="py-16">
+      <div className="container mx-auto px-4">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14 place-items-center">
-  {products.map((item, index) => (
-    <div
-      key={item.title}
-      className={`
-        bg-white rounded-2xl p-10 w-[300px]
-        shadow-lg hover:shadow-2xl transition-all duration-300
-        flex flex-col items-center text-center
-        ${
-          index === 0
-            ? "-rotate-6"
-            : index === 1
-            ? "rotate-4"
-            : index === 2
-            ? "-rotate-5"
-            : "rotate-6"
-        }
-      `}
-    >
-      {/* Product Image */}
-      <div className="w-48 h-64 relative mb-8">
-        <Image
-          src={item.img}
-          alt={item.title}
-          fill
-          className="object-contain"
-        />
-      </div>
+        {/* Heading */}
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-14 sm:mb-20 text-red-900">
+          Our Products
+        </h2>
 
-      {/* Title */}
-      <h3 className="text-2xl font-extrabold text-gray-900 mb-2">
-        {item.title}
-      </h3>
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          {products.map((item) => (
+            <div
+              key={item.title}
+              className="flex flex-col items-center text-center"
+            >
+              {/* Bigger Image Container */}
+              <div className="w-full relative rounded-xl overflow-hidden 
+                    aspect-[4/5] sm:aspect-[3/4] lg:h-80 group">
 
-      {/* Icons */}
-      <div className="text-3xl mb-4">{item.spice}</div>
-
-      {/* Price */}
-      <p className="text-2xl font-bold text-gray-900 mb-4">
-        {item.price}
-      </p>
-
-      {/* Button */}
-      <button className="bg-[#8B4B2E] hover:bg-[#723b22] text-white font-semibold px-8 py-3 rounded-full shadow-md w-full">
-        ADD TO CART
-      </button>
-    </div>
-  ))}
-</div>
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-150"
+                />
+              </div>
 
 
+              {/* Title */}
+              <h3 className="mt-4 text-lg font-semibold text-gray-900">
+                {item.title}
+              </h3>
 
+              {/* Spice Level */}
+              <p className="text-2xl mt-1">{item.spice}</p>
+
+              {/* Price */}
+              <p className="mt-1 text-lg font-bold text-gray-900">
+                {item.price}{" "}
+                <span className="text-red-500 line-through text-sm ml-1">
+                  {item.oldPrice}
+                </span>
+              </p>
+
+              {/* Button */}
+              <a
+                href="https://wa.me/923029476438?text=I%20want%20a%20free%20Jhatka%20Jar%20sample"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="mt-4 border border-black px-6 py-2 rounded-md hover:bg-red-900 hover:text-white transition">
+                  SHOP NOW
+                </button>
+              </a>
+            </div>
+          ))}
         </div>
-      </section>
-    </Reveal>
+
+      </div>
+    </section>
   );
 }
