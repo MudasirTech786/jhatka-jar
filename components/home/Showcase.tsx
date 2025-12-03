@@ -6,7 +6,7 @@ const products = [
     price: "PKR. 1000",
     oldPrice: 2500,
     spice: "🌶️🌶️🌶️",
-    img: "/images/Chilli card.jpg",
+    img: "/images/chillicard.jpg",
     badge: "Best Seller"
   },
   {
@@ -14,14 +14,14 @@ const products = [
     price: "PKR. 1000",
     oldPrice: 2500,
     spice: "🌶️🌶️",
-    img: "/images/Onion card.jpg",
+    img: "/images/onioncard.jpg",
   },
   {
     title: "Garlic Achaar",
     price: "PKR. 1000",
     oldPrice: 2500,
     spice: "🌶️",
-    img: "/images/Garlic card.jpg",
+    img: "/images/garlicard.jpg",
     badge: "Limited"
   },
   {
@@ -29,7 +29,7 @@ const products = [
     price: "PKR. 1000",
     oldPrice: 2500,
     spice: "🌶️🌶️",
-    img: "/images/Mix card.jpg",
+    img: "/images/mixcard.jpg",
     badge: "Limited"
   },
 ];
