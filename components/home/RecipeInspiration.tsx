@@ -30,13 +30,15 @@ export default function RecipeInspiration() {
           </h2>
 
           {/* Responsive Grid */}
-          <div className="
-            grid
-            grid-cols-1 
-            sm:grid-cols-2 
-            md:grid-cols-4 
-            gap-6 sm:gap-8
-          ">
+          <div
+            className="
+              grid
+              grid-cols-2       /* smaller images on mobile */
+              sm:grid-cols-2
+              md:grid-cols-4
+              gap-4 sm:gap-8
+            "
+          >
             {recipes.map((r) => (
               <div
                 key={r.name}
@@ -46,10 +48,10 @@ export default function RecipeInspiration() {
                   overflow-hidden
                   shadow-lg
                   border border-white/20
-                  transition-transform
-                  duration-500
+                  transition-transform duration-500
                   hover:scale-105
-                  aspect-[3/4]
+                  aspect-[1/1.2]      /* smaller aspect ratio on mobile */
+                  sm:aspect-[3/4]      /* taller on larger screens */
                 "
               >
                 {/* Image */}
@@ -65,7 +67,7 @@ export default function RecipeInspiration() {
 
                 {/* Label */}
                 <div className="absolute bottom-4 w-full text-center px-2">
-                  <p className="text-white text-lg sm:text-xl font-semibold drop-shadow-lg">
+                  <p className="text-white text-sm sm:text-xl font-semibold drop-shadow-lg">
                     {r.name}
                   </p>
                 </div>

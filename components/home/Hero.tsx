@@ -80,47 +80,98 @@ export default function Hero() {
       </nav>
 
       {/* HERO CONTENT */}
-      <div className="container mx-auto px-4 sm:px-8 md:px-16 
-  grid grid-cols-1 md:grid-cols-2 gap-10 items-center
-  mt-40 sm:mt-48 md:mt-36 z-10">
+      <div
+        className="
+    container mx-auto px-4 sm:px-8 md:px-16
+    grid grid-cols-1 md:grid-cols-2
+    items-center
+    mt-32 sm:mt-40 md:mt-36
+    z-10
+  "
+      >
 
-        <div className="relative max-w-xl mx-auto md:mx-0">
+        {/* 📱 MOBILE VIEW ONLY */}
+        <div className="block md:hidden w-full flex flex-col items-center text-center relative mt-10">
 
-          {/* PREMIUM GLASS GRADIENT CARD */}
-          <div className="
-      absolute inset-0 
-      bg-gradient-to-br from-black/70 via-black/40 to-black/20
-      backdrop-blur-md 
-      rounded-3xl 
-      shadow-[0_8px_32px_rgba(0,0,0,0.3)]
-      border border-white/10
-      -z-10
-    " />
+  {/* MOBILE OVERLAY CARD (Perfect Fit + Centered) */}
+  <div
+    className="
+      absolute
+      top-0 left-1/2 -translate-x-1/2
+      w-[92%]
+      pt-6 pb-8 px-6
+      z-[-1]
+    "
+  />
+
+  {/* MOBILE HEADING */}
+  <h1 className="text-4xl font-extrabold leading-tight mb-5 mt-8 break-words drop-shadow-[0_3px_6px_rgba(0,0,0,0.6)]">
+    Authentic Pakistani 
+    <span className="text-yellow-400 px-1 rounded-md"> Achar </span>
+    Made the 
+    <span className="text-yellow-400 px-1 rounded-md"> Traditional Way.</span>
+  </h1>
+
+  {/* MOBILE SHOP BUTTON */}
+  <Link
+    href="https://wa.me/923029476438?text=I%20want%20a%20free%20Jhatka%20Jar%20sample"
+    className="
+      inline-block
+      bg-red-600 hover:bg-red-700
+      text-white font-semibold
+      px-10 py-3.5
+      rounded-xl
+      shadow-lg shadow-red-900/40
+      transition duration-200
+      text-lg
+      mt-2
+    "
+  >
+    SHOP NOW
+  </Link>
+
+</div>
+
+
+
+        {/* 🖥️ DESKTOP CONTENT */}
+        <div className="hidden md:block relative max-w-xl">
+
+          {/* GLASS CARD */}
+          <div
+            className="
+        absolute inset-0
+        bg-gradient-to-br from-black/70 via-black/40 to-black/20
+        backdrop-blur-md
+        rounded-3xl
+        shadow-[0_8px_32px_rgba(0,0,0,0.3)]
+        border border-white/10
+        -z-10
+      "
+          />
 
           <div className="p-8 sm:p-10 space-y-6">
-
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
               Authentic Pakistani <span className="text-yellow-400">Achar</span> —
               <br />Made the Traditional Way.
             </h1>
 
-            <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
+            <p className="text-xl text-white/90 leading-relaxed">
               Crafted in small batches using handpicked spices and time-honoured
               family recipes.
             </p>
 
-            {/* CTA BUTTONS */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-
+            {/* CTAs */}
+            <div className="flex gap-6">
               <Link
                 href="https://wa.me/923029476438?text=I%20want%20a%20free%20Jhatka%20Jar%20sample"
                 className="
-            bg-red-600 hover:bg-red-700 
-            text-white font-semibold 
-            px-8 py-3 rounded-xl 
+            bg-red-600 hover:bg-red-700
+            text-white font-semibold
+            px-8 py-3 rounded-xl
             shadow-lg shadow-red-900/40
             transition duration-200
-            text-center text-lg
+            text-lg
           "
               >
                 SHOP NOW
@@ -129,24 +180,22 @@ export default function Hero() {
               <Link
                 href="https://wa.me/923029476438?text=I%20want%20a%20free%20Jhatka%20Jar%20sample"
                 className="
-            px-8 py-3 rounded-xl 
-            text-lg font-semibold 
-            border border-yellow-400 
+            px-8 py-3 rounded-xl
+            text-lg font-semibold
+            border border-yellow-400
             text-yellow-300
-            hover:bg-yellow-400 hover:text-black 
+            hover:bg-yellow-400 hover:text-black
             transition duration-200
             backdrop-blur-sm
-            text-center
           "
               >
                 VIEW FLAVOURS
               </Link>
-
             </div>
-
           </div>
         </div>
 
+        {/* Right empty column for desktop symmetry */}
         <div className="hidden md:block" />
       </div>
 
