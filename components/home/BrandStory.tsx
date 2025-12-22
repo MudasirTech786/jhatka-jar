@@ -1,115 +1,84 @@
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
-import { CheckIcon } from "@heroicons/react/24/solid";
 
 export default function BrandStory() {
   return (
     <Reveal effect="slide-up">
       <section
         className="
-          py-16                 /* mobile padding reduced */
-          sm:py-20             
-          md:py-28             
           relative overflow-hidden
+          py-20 sm:py-24 md:py-32
+          bg-gradient-to-b from-[#2F8A57] to-[#25724A]
+          text-white
         "
       >
-        {/* Background Image */}
-        <div className="absolute inset-0 opacity-30">
+        {/* Background Mandala Image */}
+        <div className="absolute inset-0 opacity-20 z-0">
           <Image
             src="/images/bg-mandala.png"
-            alt="Background texture"
+            alt="Traditional mandala texture"
             fill
             className="object-cover"
           />
         </div>
 
-        {/* Decorative Shape */}
-        <div className="absolute top-0 right-0 w-64 h-64 rounded-full -translate-x-1/3 -translate-y-1/3 blur-3xl z-0"></div>
+        {/* Optional dark overlay for readability */}
+        <div className="absolute inset-0 bg-black/10 z-0" />
 
         <div className="container mx-auto px-4 sm:px-6 md:px-10 relative z-10">
-          <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
 
-            {/* Image */}
-            <div
-              className="
-                relative rounded-3xl overflow-hidden shadow-2xl
-                transition-transform duration-500
-                hover:scale-105
-              "
-            >
-              <Image
-                src="/images/nani.jpg"
-                alt="Nani making achar"
-                width={540}
-                height={400}
-                className="object-cover w-full h-full"
-              />
+          {/* Main Heading */}
+          <h2
+            className="
+              text-center
+              text-3xl sm:text-4xl md:text-5xl
+              font-extrabold
+              leading-tight
+              max-w-4xl
+              mx-auto
+              mb-16
+            "
+          >
+            Unraveling the Artisan Magic Behind <br className="hidden sm:block" />
+            Jhatka Jar’s Legendary Pickle Craftsmanship
+          </h2>
+
+          {/* Two Column Content */}
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 max-w-5xl mx-auto">
+
+            {/* Left Column */}
+            <div className="text-center md:text-left space-y-4">
+              <h3 className="text-xl sm:text-2xl font-bold">
+                Authentic Ingredients Secret {" "}
+                <span className="inline-block bg-yellow-400 text-black px-2 py-0.5 rounded">
+                  Revealed 
+                </span>
+              </h3>
+
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed opacity-90">
+                Our meticulously sourced red chillies and hand-selected spices
+                transform ordinary ingredients into extraordinary culinary
+                masterpieces. Every element is chosen with care, following
+                generations-old traditions that honor purity, balance, and
+                flavor.
+              </p>
             </div>
 
-            {/* Text */}
-            <div className="space-y-4 sm:space-y-6 text-center md:text-left">
+            {/* Right Column */}
+            <div className="text-center md:text-left space-y-4">
+              <h3 className="text-xl sm:text-2xl font-bold">
+                Handcrafted Pickle Making{" "}
+                <span className="inline-block bg-yellow-400 text-black px-2 py-0.5 rounded">
+                  Process
+                </span>
+              </h3>
 
-              <h2
-                className="
-                  text-3xl sm:text-4xl md:text-5xl
-                  font-extrabold text-red-900
-                "
-              >
-                A Taste Passed Down
-              </h2>
-
-              <p
-                className="
-                  text-gray-700 
-                  text-base sm:text-lg md:text-xl 
-                  leading-relaxed
-                "
-              >
-                100% natural ingredients, no preservatives and slow sun-ripening—
-                the way our Nani & Ammi made it.
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed opacity-90">
+                Each pickle batch undergoes a sacred ritual of sun-curing,
+                patient mixing, and careful resting. This slow, handcrafted
+                process allows flavors to mature naturally, guaranteeing a
+                bold explosion of taste in every single bite.
               </p>
-
-              <ul className="space-y-2 sm:space-y-3">
-                {[
-                  "Hand-selected spices",
-                  "Traditional mixing",
-                  "Sun-ripened",
-                  "Sealed for freshness",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="
-                      flex flex-col md:flex-row 
-                      items-center md:items-center 
-                      text-gray-800 
-                      text-base sm:text-lg
-                    "
-                  >
-                    <CheckIcon className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-500 mr-0 md:mr-3 mb-1 md:mb-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <button
-                className="
-                  mt-4 
-                  inline-block 
-                  bg-gradient-to-r from-yellow-500 to-yellow-600 
-                  hover:from-yellow-600 hover:to-yellow-500 
-                  text-white 
-                  font-semibold 
-                  px-6 sm:px-8 
-                  py-2.5 sm:py-3 
-                  rounded-xl 
-                  shadow-lg hover:shadow-2xl 
-                  transition-all duration-300
-                  mx-auto md:mx-0
-                  block
-                "
-              >
-                Explore Our Pickles
-              </button>
             </div>
 
           </div>

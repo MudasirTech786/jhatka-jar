@@ -23,7 +23,7 @@ export default function Testimonials() {
         </div>
 
         <div className="container mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-14 sm:mb-20 text-red-900">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-14 sm:mb-20">
             What Our Customers Say
           </h2>
 

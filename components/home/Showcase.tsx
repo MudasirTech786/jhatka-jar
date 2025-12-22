@@ -40,7 +40,7 @@ export default function Showcase() {
       <div className="container mx-auto px-4">
 
         {/* Heading */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 sm:mb-16 text-red-900">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 sm:mb-16 text-white">
           Our Products
         </h2>
 
@@ -78,7 +78,7 @@ export default function Showcase() {
               </div>
 
               {/* Title */}
-              <h3 className="mt-3 text-sm sm:text-base font-semibold text-gray-900">
+              <h3 className="mt-3 text-sm sm:text-base font-semibold">
                 {item.title}
               </h3>
 
@@ -86,7 +86,7 @@ export default function Showcase() {
               <p className="text-lg mt-1">{item.spice}</p>
 
               {/* Price */}
-              <p className="mt-1 text-sm sm:text-base font-bold text-gray-900">
+              <p className="mt-1 text-sm sm:text-base font-bold">
                 {item.price}
                 <span className="text-red-500 line-through text-xs ml-1">
                   {item.oldPrice}
@@ -101,8 +101,8 @@ export default function Showcase() {
                 className="mt-3"
               >
                 <button className="
-                  border text-black border-black px-3 py-1 rounded-md text-xs sm:text-sm
-                  hover:bg-red-900 hover:text-white transition
+                  border text-white border-white px-3 py-1 rounded-md text-xs sm:text-sm
+                  hover:bg-red-900 hover:border-black hover:text-white transition
                 ">
                   SHOP NOW
                 </button>
