@@ -25,7 +25,7 @@ export default function RecipeInspiration() {
 
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 sm:mb-16 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 sm:mb-16 text-center text-red-900">
             Recipe Inspiration
           </h2>
 
