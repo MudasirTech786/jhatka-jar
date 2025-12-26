@@ -60,9 +60,10 @@ export default function BrandStory() {
 
               <p
                 className="
-                  text-base sm:text-lg md:text-xl 
-                  leading-relaxed
-                "
+    text-base sm:text-lg md:text-xl 
+    leading-relaxed
+    text-black
+  "
               >
                 100% natural ingredients, no preservatives and slow sun-ripening—
                 the way our ancestors made it.
@@ -78,10 +79,11 @@ export default function BrandStory() {
                   <li
                     key={item}
                     className="
-                      flex flex-col md:flex-row 
-                      items-center md:items-center 
-                      text-base sm:text-lg
-                    "
+        flex flex-col md:flex-row 
+        items-center md:items-center 
+        text-base sm:text-lg
+        text-black
+      "
                   >
                     <CheckIcon className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-500 mr-0 md:mr-3 mb-1 md:mb-0" />
                     {item}

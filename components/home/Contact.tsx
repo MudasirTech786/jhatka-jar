@@ -10,7 +10,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const phone = "00923016566129"; // Replace with your WhatsApp number
+    const phone = "00923022525228"; // Replace with your WhatsApp number
     const text = `Hello! I am ${name}.\nEmail: ${email}\nMessage: ${message}`;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 
