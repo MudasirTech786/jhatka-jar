@@ -29,34 +29,34 @@ export default function Contact() {
           className="p-8 rounded-2xl shadow-md space-y-6"
         >
           <div>
-            <label className="block text-sm font-semibold mb-2">Name</label>
+            <label className="block text-sm font-semibold mb-2 text-black">Name</label>
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 text-black focus:outline-none focus:ring-2 focus:ring-red-400"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-semibold mb-2">Email</label>
+            <label className="block text-sm font-semibold mb-2 text-black">Email</label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 text-black focus:outline-none focus:ring-2 focus:ring-red-400"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-semibold mb-2">Message</label>
+            <label className="block text-sm font-semibold mb-2 text-black">Message</label>
             <textarea
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 h-32 resize-none focus:outline-none focus:ring-2 focus:ring-red-400"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 text-black h-32 resize-none focus:outline-none focus:ring-2 focus:ring-red-400"
             />
           </div>
 
