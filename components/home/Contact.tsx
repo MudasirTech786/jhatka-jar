@@ -10,7 +10,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const phone = "923249165123"; // ✅ country code + number, no + or 00
+    const phone = "923029476438"; // ✅ country code + number, no + or 00
     const text = `Hello! I am ${name}.\nEmail: ${email}\nMessage: ${message}`;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 
