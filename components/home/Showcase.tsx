@@ -30,14 +30,14 @@ const products = [
 export default function Showcase() {
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-[#fafafa]">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4">
         {/* HEADING */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 sm:mb-16 text-red-900">
           Our Signature Pickles
         </h2>
 
-        {/* GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        {/* GRID → 2 COLUMNS ON MOBILE */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {products.map((item) => (
             <div
               key={item.title}
@@ -54,56 +54,58 @@ export default function Showcase() {
                 />
 
                 {/* BADGES */}
-                <div className="absolute top-3 left-3 flex flex-wrap gap-2">
+                <div className="absolute top-2 left-2 flex flex-wrap gap-1">
                   {item.badge && (
-                    <span className="px-3 py-1 text-xs font-semibold rounded-full bg-red-600 text-white">
+                    <span className="px-2.5 py-1 text-[10px] sm:text-xs font-semibold rounded-full bg-red-600 text-white">
                       {item.badge}
                     </span>
                   )}
-                  <span className="px-3 py-1 text-xs font-semibold rounded-full bg-green-600 text-white">
+                  <span className="px-2.5 py-1 text-[10px] sm:text-xs font-semibold rounded-full bg-green-600 text-white">
                     Free Sample
                   </span>
                 </div>
               </div>
 
               {/* CONTENT */}
-              <div className="p-4 sm:p-5 text-center">
+              <div className="p-3 sm:p-5 text-center">
                 {/* TITLE */}
-                <h3 className="text-sm sm:text-base font-semibold text-gray-900">
+                <h3 className="text-sm sm:text-base font-semibold text-gray-900 leading-tight">
                   {item.title}
                 </h3>
 
                 {/* SPICE */}
-                <div className="mt-1 text-base sm:text-lg">
+                <div className="mt-1 text-sm sm:text-lg">
                   {item.spice}
                 </div>
 
                 {/* FEATURES */}
-                <div className="mt-4 flex flex-wrap justify-center gap-2 text-xs">
-                  <span className="flex items-center gap-1 px-3 py-1 rounded-full bg-green-50 text-green-700 font-medium">
-                    <Check size={12} className="text-green-600" />
+                <div className="mt-3 flex flex-wrap justify-center gap-1.5 text-[10px] sm:text-xs">
+                  <span className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-50 text-green-700 font-medium">
+                    <Check size={11} className="text-green-600" />
                     No Preservatives
                   </span>
-                  <span className="flex items-center gap-1 px-3 py-1 rounded-full bg-green-50 text-green-700 font-medium">
-                    <Check size={12} className="text-green-600" />
+                  <span className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-50 text-green-700 font-medium">
+                    <Check size={11} className="text-green-600" />
                     Homemade
                   </span>
                 </div>
 
                 {/* PRICE */}
-                <div className="mt-5">
-                  <p className="text-base sm:text-lg font-bold text-gray-900">
+                <div className="mt-4">
+                  <p className="text-sm sm:text-lg font-bold text-gray-900">
                     Rs. 350{" "}
-                    <span className="text-sm font-medium">/ 250g</span>
+                    <span className="text-[11px] sm:text-sm font-medium">
+                      / 250g
+                    </span>
                   </p>
-                  <p className="text-sm text-red-700 font-semibold mt-1">
+                  <p className="text-[11px] sm:text-sm text-red-700 font-semibold mt-0.5">
                     3 Jars for Rs. 1000
                   </p>
                 </div>
 
                 {/* SHIPPING */}
-                <div className="mt-3 flex justify-center items-center gap-1 text-xs text-green-700">
-                  <Truck size={14} />
+                <div className="mt-2 flex justify-center items-center gap-1 text-[10px] sm:text-xs text-green-700">
+                  <Truck size={12} />
                   Free shipping above Rs. 1000
                 </div>
 
@@ -112,9 +114,9 @@ export default function Showcase() {
                   href="https://wa.me/923029476438?text=I%20want%20to%20order%20Jhatka%20Jar%20pickle."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block mt-6"
+                  className="block mt-4 sm:mt-6"
                 >
-                  <button className="w-full py-2.5 sm:py-3 rounded-xl bg-red-600 text-white font-semibold tracking-wide hover:bg-red-700 transition">
+                  <button className="w-full py-2 sm:py-3 rounded-xl bg-red-600 text-white text-xs sm:text-base font-semibold tracking-wide hover:bg-red-700 transition">
                     ORDER NOW
                   </button>
                 </a>
