@@ -29,29 +29,32 @@ const products = [
 
 export default function Showcase() {
   return (
-    <section className="py-24 bg-[#fafafa]">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[#fafafa]">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-red-900">
+        {/* HEADING */}
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 sm:mb-16 text-red-900">
           Our Signature Pickles
         </h2>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {products.map((item) => (
             <div
               key={item.title}
-              className="group rounded-2xl bg-white border border-gray-200 overflow-hidden transition-all hover:-translate-y-1 hover:shadow-xl"
+              className="group rounded-2xl bg-white border border-gray-200 overflow-hidden
+                         transition-all hover:-translate-y-1 hover:shadow-xl active:scale-[0.98]"
             >
               {/* IMAGE */}
-              <div className="relative aspect-[4/5] bg-gray-100">
+              <div className="relative aspect-[3/4] sm:aspect-[4/5] bg-gray-100">
                 <Image
                   src={item.img}
                   alt={item.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
 
                 {/* BADGES */}
-                <div className="absolute top-3 left-3 flex gap-2">
+                <div className="absolute top-3 left-3 flex flex-wrap gap-2">
                   {item.badge && (
                     <span className="px-3 py-1 text-xs font-semibold rounded-full bg-red-600 text-white">
                       {item.badge}
@@ -64,31 +67,34 @@ export default function Showcase() {
               </div>
 
               {/* CONTENT */}
-              <div className="p-5 text-center">
-                <h3 className="text-base font-semibold text-gray-900">
+              <div className="p-4 sm:p-5 text-center">
+                {/* TITLE */}
+                <h3 className="text-sm sm:text-base font-semibold text-gray-900">
                   {item.title}
                 </h3>
 
-                <div className="mt-1 text-lg">{item.spice}</div>
+                {/* SPICE */}
+                <div className="mt-1 text-base sm:text-lg">
+                  {item.spice}
+                </div>
 
                 {/* FEATURES */}
-                <div className="flex justify-center gap-3 mt-4 text-xs">
-  <span className="flex items-center gap-1 px-3 py-1 rounded-full bg-green-50 text-green-700 font-medium">
-    <Check size={12} className="text-green-600" />
-    No Preservatives
-  </span>
-
-  <span className="flex items-center gap-1 px-3 py-1 rounded-full bg-green-50 text-green-700 font-medium">
-    <Check size={12} className="text-green-600" />
-    Homemade
-  </span>
-</div>
-
+                <div className="mt-4 flex flex-wrap justify-center gap-2 text-xs">
+                  <span className="flex items-center gap-1 px-3 py-1 rounded-full bg-green-50 text-green-700 font-medium">
+                    <Check size={12} className="text-green-600" />
+                    No Preservatives
+                  </span>
+                  <span className="flex items-center gap-1 px-3 py-1 rounded-full bg-green-50 text-green-700 font-medium">
+                    <Check size={12} className="text-green-600" />
+                    Homemade
+                  </span>
+                </div>
 
                 {/* PRICE */}
                 <div className="mt-5">
-                  <p className="text-lg font-bold text-gray-900">
-                    Rs. 350 <span className="text-sm font-medium">/ 250g</span>
+                  <p className="text-base sm:text-lg font-bold text-gray-900">
+                    Rs. 350{" "}
+                    <span className="text-sm font-medium">/ 250g</span>
                   </p>
                   <p className="text-sm text-red-700 font-semibold mt-1">
                     3 Jars for Rs. 1000
@@ -97,7 +103,8 @@ export default function Showcase() {
 
                 {/* SHIPPING */}
                 <div className="mt-3 flex justify-center items-center gap-1 text-xs text-green-700">
-                  <Truck size={14} /> Free shipping above Rs. 1000
+                  <Truck size={14} />
+                  Free shipping above Rs. 1000
                 </div>
 
                 {/* CTA */}
@@ -107,7 +114,7 @@ export default function Showcase() {
                   rel="noopener noreferrer"
                   className="block mt-6"
                 >
-                  <button className="w-full py-3 rounded-xl bg-red-600 text-white font-semibold tracking-wide hover:bg-red-700 transition">
+                  <button className="w-full py-2.5 sm:py-3 rounded-xl bg-red-600 text-white font-semibold tracking-wide hover:bg-red-700 transition">
                     ORDER NOW
                   </button>
                 </a>
