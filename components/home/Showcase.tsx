@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { Check, Truck } from "lucide-react";
 
 const products = [
   {
-    title: "Spicy Chilli Achar",
+    title: "Chilli Achar",
     spice: "🌶️🌶️🌶️",
     img: "/images/chillicard.jpg",
     badge: "Best Seller",
@@ -28,59 +29,89 @@ const products = [
 
 export default function Showcase() {
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-14 text-red-900">
+    <section className="py-24 bg-[#fafafa]">
+      <div className="max-w-7xl mx-auto px-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-red-900">
           Our Signature Pickles
         </h2>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((item) => (
-            <div key={item.title} className="flex flex-col items-center text-center group">
-              
-              {/* Image with badges */}
-              <div className="relative w-full aspect-[1/1] sm:aspect-[3/4] overflow-hidden rounded-xl shadow-lg">
-                
-                <div className="absolute top-2 left-2 flex flex-col gap-1 z-10">
-                  {item.badge && (
-                    <span className="text-[10px] sm:text-xs px-2 py-1 rounded-full bg-red-600 text-white">
-                      {item.badge}
-                    </span>
-                  )}
-                  <span className="text-[10px] sm:text-xs px-2 py-1 rounded-full bg-green-600 text-white">
-                    Free Sample
-                  </span>
-                </div>
-
+            <div
+              key={item.title}
+              className="group rounded-2xl bg-white border border-gray-200 overflow-hidden transition-all hover:-translate-y-1 hover:shadow-xl"
+            >
+              {/* IMAGE */}
+              <div className="relative aspect-[4/5] bg-gray-100">
                 <Image
                   src={item.img}
                   alt={item.title}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
+
+                {/* BADGES */}
+                <div className="absolute top-3 left-3 flex gap-2">
+                  {item.badge && (
+                    <span className="px-3 py-1 text-xs font-semibold rounded-full bg-red-600 text-white">
+                      {item.badge}
+                    </span>
+                  )}
+                  <span className="px-3 py-1 text-xs font-semibold rounded-full bg-green-600 text-white">
+                    Free Sample
+                  </span>
+                </div>
               </div>
 
-              {/* Product title */}
-              <h3 className="mt-4 text-sm sm:text-base font-semibold text-gray-900">
-                {item.title}
-              </h3>
+              {/* CONTENT */}
+              <div className="p-5 text-center">
+                <h3 className="text-base font-semibold text-gray-900">
+                  {item.title}
+                </h3>
 
-              {/* Spice level */}
-              <p className="text-lg mt-1">{item.spice}</p>
+                <div className="mt-1 text-lg">{item.spice}</div>
 
-              {/* Button */}
-              <a
-                href="https://wa.me/923029476438?text=I%20want%20a%20free%20Jhatka%20Jar%20sample"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 w-full"
-              >
-                <button
-                  className="w-full py-3 text-sm sm:text-base font-semibold text-white rounded-full bg-red-600 hover:bg-red-700 shadow-md hover:shadow-lg transition-all duration-300"
+                {/* FEATURES */}
+                <div className="flex justify-center gap-3 mt-4 text-xs">
+  <span className="flex items-center gap-1 px-3 py-1 rounded-full bg-green-50 text-green-700 font-medium">
+    <Check size={12} className="text-green-600" />
+    No Preservatives
+  </span>
+
+  <span className="flex items-center gap-1 px-3 py-1 rounded-full bg-green-50 text-green-700 font-medium">
+    <Check size={12} className="text-green-600" />
+    Homemade
+  </span>
+</div>
+
+
+                {/* PRICE */}
+                <div className="mt-5">
+                  <p className="text-lg font-bold text-gray-900">
+                    Rs. 350 <span className="text-sm font-medium">/ 250g</span>
+                  </p>
+                  <p className="text-sm text-red-700 font-semibold mt-1">
+                    3 Jars for Rs. 1000
+                  </p>
+                </div>
+
+                {/* SHIPPING */}
+                <div className="mt-3 flex justify-center items-center gap-1 text-xs text-green-700">
+                  <Truck size={14} /> Free shipping above Rs. 1000
+                </div>
+
+                {/* CTA */}
+                <a
+                  href="https://wa.me/923029476438?text=I%20want%20to%20order%20Jhatka%20Jar%20pickle."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block mt-6"
                 >
-                  REQUEST SAMPLE
-                </button>
-              </a>
+                  <button className="w-full py-3 rounded-xl bg-red-600 text-white font-semibold tracking-wide hover:bg-red-700 transition">
+                    ORDER NOW
+                  </button>
+                </a>
+              </div>
             </div>
           ))}
         </div>
