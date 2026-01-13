@@ -79,16 +79,15 @@ export default function Showcase() {
                 </div>
 
                 {/* FEATURES */}
-                <div className="mt-3 flex flex-wrap justify-center gap-1.5 text-[10px] sm:text-xs">
-                  <span className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-50 text-green-700 font-medium">
-                    <Check size={11} className="text-green-600" />
-                    No Preservatives
+                <div className="mt-3 flex justify-center gap-2 text-[10px] sm:text-xs">
+                  <span className="px-3 py-1 rounded-lg bg-green-100 text-green-800 font-semibold">
+                    ✓ Homemade
                   </span>
-                  <span className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-50 text-green-700 font-medium">
-                    <Check size={11} className="text-green-600" />
-                    Homemade
+                  <span className="px-3 py-1 rounded-lg bg-green-100 text-green-800 font-semibold">
+                    ✓ No Preservatives
                   </span>
                 </div>
+
 
                 {/* PRICE */}
                 <div className="mt-4">
@@ -111,7 +110,7 @@ export default function Showcase() {
 
                 {/* CTA */}
                 <a
-                  href="https://wa.me/923029476438?text=I%20want%20to%20order%20Jhatka%20Jar%20pickle."
+                  href="https://wa.me/923249165123?text=I%20want%20to%20order%20Jhatka%20Jar%20pickle."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block mt-4 sm:mt-6"

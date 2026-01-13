@@ -55,7 +55,7 @@ export default function FreeSample() {
                     <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto justify-center">
                         {/* INSTAGRAM */}
                         <a
-                            href="https://instagram.com/YOUR_INSTAGRAM_HANDLE"
+                            href="https://www.instagram.com/jhatka_jar?igsh=MW1sNG5wMG41MGI5cQ=="
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -79,7 +79,7 @@ export default function FreeSample() {
 
                         {/* WHATSAPP */}
                         <a
-                            href="https://wa.me/923029476438?text=I%20have%20followed%20you%20on%20Instagram%20and%20shared%20the%20story.%20Here%20is%20the%20screenshot."
+                            href="https://wa.me/923249165123?text=I%20have%20followed%20you%20on%20Instagram%20and%20shared%20the%20story.%20Here%20is%20the%20screenshot."
                             target="_blank"
                             rel="noopener noreferrer"
                         >

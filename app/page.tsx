@@ -74,7 +74,7 @@ export default function Home() {
         {/* WHATSAPP DESKTOP */}
         <div className="hidden lg:flex items-center">
           <a
-            href="https://wa.me/923029476438"
+            href="https://wa.me/923249165123"
             target="_blank"
             rel="noopener noreferrer"
             className="
@@ -119,7 +119,7 @@ export default function Home() {
             </button>
 
             <a
-              href="https://wa.me/923029476438"
+              href="https://wa.me/923249165123"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
