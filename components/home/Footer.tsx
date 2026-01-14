@@ -91,7 +91,7 @@ export default function Footer() {
               Email: <a href="mailto:info@jhatkajar.com" className="underline">jhatkajar@gmail.com</a>
             </p>
             <p className="text-white/70 text-sm">
-              Phone: <a href="tel:+923001234567" className="underline">+92 324 9165123</a>
+              Phone: <a href="tel:+923249165123" className="underline">+92 324 9165123</a>
             </p>
           </div>
 

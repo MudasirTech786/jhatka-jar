@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Check, Truck } from "lucide-react";
+import { Truck } from "lucide-react";
 
 const products = [
   {
@@ -36,16 +36,16 @@ export default function Showcase() {
           Our Signature Pickles
         </h2>
 
-        {/* GRID → 2 COLUMNS ON MOBILE */}
+        {/* GRID */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {products.map((item) => (
             <div
               key={item.title}
               className="group rounded-2xl bg-white border border-gray-200 overflow-hidden
-                         transition-all hover:-translate-y-1 hover:shadow-xl active:scale-[0.98]"
+                         transition-all hover:-translate-y-1 hover:shadow-xl"
             >
               {/* IMAGE */}
-              <div className="relative aspect-[3/4] sm:aspect-[4/5] bg-gray-100">
+              <div className="relative aspect-[3/4] sm:aspect-[4/5] bg-gray-100 overflow-hidden">
                 <Image
                   src={item.img}
                   alt={item.title}
@@ -54,7 +54,7 @@ export default function Showcase() {
                 />
 
                 {/* BADGES */}
-                <div className="absolute top-2 left-2 flex flex-wrap gap-1">
+                <div className="absolute top-2 left-2 flex flex-wrap gap-1 z-10">
                   {item.badge && (
                     <span className="px-2.5 py-1 text-[10px] sm:text-xs font-semibold rounded-full bg-red-600 text-white">
                       {item.badge}
@@ -63,6 +63,17 @@ export default function Showcase() {
                   <span className="px-2.5 py-1 text-[10px] sm:text-xs font-semibold rounded-full bg-green-600 text-white">
                     Free Sample
                   </span>
+                </div>
+
+                {/* HANDMADE STICKER */}
+                <div className="absolute top-2 right-2 w-16 sm:w-20 lg:w-24">
+                  <Image
+                    src="/images/handmade-sticker.png"
+                    alt="Handmade & No Preservatives"
+                    width={96}
+                    height={96}
+                    className="rounded-full shadow-lg"
+                  />
                 </div>
               </div>
 
@@ -77,17 +88,6 @@ export default function Showcase() {
                 <div className="mt-1 text-sm sm:text-lg">
                   {item.spice}
                 </div>
-
-                {/* FEATURES */}
-                <div className="mt-3 flex justify-center gap-2 text-[10px] sm:text-xs">
-                  <span className="px-3 py-1 rounded-lg bg-green-100 text-green-800 font-semibold">
-                    ✓ Homemade
-                  </span>
-                  <span className="px-3 py-1 rounded-lg bg-green-100 text-green-800 font-semibold">
-                    ✓ No Preservatives
-                  </span>
-                </div>
-
 
                 {/* PRICE */}
                 <div className="mt-4">
